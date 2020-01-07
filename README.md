@@ -37,5 +37,14 @@ Lin UI 是基于 **微信小程序原生语法** 实现的组件库。遵循简�
 
 # 案例
 
-![1](https://cdn.learnku.com/uploads/images/202001/08/24082/iRzcX0uQjq.png!large)![2](https://cdn.learnku.com/uploads/images/202001/08/24082/TnbXHnif62.PNG!large)![3](https://cdn.learnku.com/uploads/images/202001/08/24082/hWEoyU7nJ8.PNG!large)
-![4](https://cdn.learnku.com/uploads/images/202001/08/24082/hOkBPlKrdl.PNG!large)![5](https://cdn.learnku.com/uploads/images/202001/08/24082/I3Vdh2SuGK.PNG!large)![6](https://cdn.learnku.com/uploads/images/202001/08/24082/bYK8AseiFB.PNG!large)
+<center class="">
+    <img widht="200px" src="https://cdn.learnku.com/uploads/images/202001/08/24082/iRzcX0uQjq.PNG!large">
+    <img widht="200px" src="https://cdn.learnku.com/uploads/images/202001/08/24082/TnbXHnif62.PNG!large">
+    <img widht="200px" src="https://cdn.learnku.com/uploads/images/202001/08/24082/hWEoyU7nJ8.PNG!large">
+</center>
+<center class="">
+    <img widht="200px" src="https://cdn.learnku.com/uploads/images/202001/08/24082/hOkBPlKrdl.PNG!large">
+    <img widht="200px" src="https://cdn.learnku.com/uploads/images/202001/08/24082/I3Vdh2SuGK.PNG!large">
+    <img widht="200px" src="https://cdn.learnku.com/uploads/images/202001/08/24082/bYK8AseiFB.PNG!large">
+</center>
+
