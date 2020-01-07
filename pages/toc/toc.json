@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "title": "/components/title/index",
+    "l-list": "/miniprogram_npm/lin-ui/list/index"
+  }
+}

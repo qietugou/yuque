@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "l-grid": "/miniprogram_npm/lin-ui/grid/index",
+    "l-list": "/miniprogram_npm/lin-ui/list/index",
+    "l-dialog": "/miniprogram_npm/lin-ui/dialog/index",
+    "l-input": "/miniprogram_npm/lin-ui/input/index",
+    "l-grid-item": "/miniprogram_npm/lin-ui/grid-item/index",
+    "l-message": "/miniprogram_npm/lin-ui/message/index"
+  }
+}

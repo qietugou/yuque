@@ -1,0 +1,28 @@
+<import src="/template/request/request.wxml" />
+<view class="section">
+    <title class="title" title="目录" count="{{count}}"></title>
+    <view class="content">
+        <view>
+            <block wx:if="{{repos.length}}">
+
+                    <detail-card
+                            bind:cellChange="cellChange"
+                            dataType="book"
+                            data="{{item}}"
+                            wx:for="{{repos}}"
+                            wx:key="{{index}}"
+                            icon="/images/home/book.png"
+                            title="{{item.name}}"
+                            class="detail-card"
+                            desc="{{item.description}}"
+                    />
+            </block>
+
+            <block wx:else>
+                <l-status-show show type="data" bind:lintap="goBack" button-text="返回"></l-status-show>
+            </block>
+
+        </view>
+    </view>
+</view>
+<template is="pageState" data="{{...pageState}}" />

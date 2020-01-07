@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "l-search-bar": "/miniprogram_npm/lin-ui/search-bar/index"
+  }
+}

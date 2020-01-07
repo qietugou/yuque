@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "title": "/components/title/index",
+    "l-list": "/miniprogram_npm/lin-ui/list/index",
+    "l-status-show": "/miniprogram_npm/lin-ui/status-show/index",
+    "detail-card": "/components/detail-card/index"
+  }
+}

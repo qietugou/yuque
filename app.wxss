@@ -1,0 +1,20 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+page {
+  height: 100%;
+}
+
+.page-state-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}

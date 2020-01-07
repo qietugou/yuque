@@ -1,0 +1,37 @@
+<import src="/template/request/request.wxml" />
+<wxs src="../../wxs/date.wxs" module="d" />
+<view class="section">
+    <view class='navi-title'>
+        <view class="title-left">
+            <view class="line"></view>
+            <text>热门知识库</text>
+        </view>
+    </view>
+    <view class="content">
+        <block wx:for="{{list}}" wx:key="{{index}}">
+
+            <l-card  data-bookId="{{item.book_id}}"data-id="{{item.id}}"
+                     describe="{{d.dateFormatStr(item.updated_at)}}"
+                     bindtap="changeItem" type="avatar" l-class="card" image="{{item.user.avatar}}"
+                    title="{{item.user.name}}" >
+                <!-- 此处为content -->
+                <view class="title">
+                   {{item.title}}
+                </view>
+                <view class="avter-content">
+                    {{item.description}}
+                </view>
+                <view class="avter-share-container">
+                    <view class="like-container">
+                        <text>发布于 </text>
+                        <text class="name">{{item.book.name}}</text>
+                    </view>
+                    <view class="like-container">
+                        获得 <text class="number">{{item.likes_count}}</text> 喜欢
+                    </view>
+                </view>
+            </l-card>
+        </block>
+    </view>
+</view>
+<template is="pageState" data="{{...pageState}}" />

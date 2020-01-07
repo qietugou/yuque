@@ -1,0 +1,31 @@
+<import src="/wxParse/wxParse.wxml"/>
+<import src="/template/request/request.wxml" />
+<wxs src="../../wxs/date.wxs" module="d" />
+<view class="content">
+    <view class="title">{{doc.title}}</view>
+    <view class="author">
+        <image class="image" src="{{doc.creator.avatar_url}}"></image>
+        <text class="name">{{doc.creator.name}}</text>
+        <text class="location" bindtap="goBack">{{doc.book.name}}</text>
+    </view>
+    <view class="body">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+
+    <view class="footer" wx:if="{{doc.created_at}}">
+        <view class="time" wx:if="{{doc.created_at}}"><l-tag plain>{{d.dateFormatStr(doc.created_at)}}</l-tag></view>
+        <view class="like"><l-tag shape="circle">喜爱 {{doc.likes_count}} </l-tag></view>
+        <view class="like"><l-tag shape="circle">评论 {{doc.comments_count}} </l-tag></view>
+    </view>
+</view>
+
+<view class="share">
+    <button class="btn" open-type="share"></button>
+    <image class="image" src="/images/other/share.png"></image>
+</view>
+<l-toast
+        show="{{hidden}}"
+        icon="success"
+        title="{{message}}"
+/>
+<template is="pageState" data="{{...pageState}}" />

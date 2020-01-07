@@ -1,0 +1,4 @@
+/* pages/version.wxss */
+.container {
+    padding: 30rpx;
+}

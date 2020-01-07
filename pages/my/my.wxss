@@ -1,0 +1,80 @@
+.container {
+    background-color: #f5f5f5;
+}
+.user-info {
+    display: flex;
+    flex-direction: row;
+    padding: 30rpx;
+    background-color: white;
+    position: relative;
+}
+.user-info .image {
+    width: 150rpx;
+    height: 150rpx;
+}
+.user-info .name {
+    font-size: 32rpx;
+    margin-top: 10rpx;
+    margin-left: 10rpx;
+}
+.user-info .time {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+ .grid-container {
+    background-color: white;
+    margin-top: 30rpx;
+    padding: 30rpx 0rpx;
+}
+.grid-container .num {
+    font-size: 40rpx;
+    font-weight: bold;
+}
+.grid-container .text {
+    font-size: 26rpx;
+    color: #8c98ae;
+}
+.list-container {
+    background-color: white;
+    margin-top: 30rpx;
+    padding:  0 30rpx;
+}
+.service {
+    position: relative;
+}
+.left-section{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*background-color: red;*/
+    opacity: 0;
+    z-index: 1;
+}
+.dialog {
+    width: 600rpx!important;
+}
+.confirm-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600rpx;
+    box-sizing: box;
+    background: #fff;
+
+}
+.confirm-form .token {
+    border-top: 1rpx solid #f3f3f3;
+    margin-top: 15rpx;
+}
+
+.confirm-form .text {
+    color: red;
+    font-size: 26rpx;
+    text-align: left;
+    width: 580rpx;
+    margin-left: 30rpx;
+
+}

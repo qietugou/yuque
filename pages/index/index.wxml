@@ -1,0 +1,72 @@
+<!--index.wxml-->
+<import src="/template/request/request.wxml" />
+<view class="container">
+    <l-search-bar
+            l-class="search-input"
+            placeholder="搜索"
+            shape="circle"
+            focus="{{false}}"
+            show-cancel="{{false}}"
+            bind:lintap="changeSearch"
+            disabled
+    >
+    </l-search-bar>
+    <view class="tab-content">
+        <l-tabs
+                animated="true"
+                swipeable="true"
+                animated-for-line="true"
+                l-line-class="tabs-line"
+                active-color="#3683d6"
+        >
+
+            <l-tab-panel tab="知识库" key="books" slot="books">
+                <view class="tab-content">
+                    <scroll-view scroll-y="true" class="tab-docs-list section-content">
+                        <block wx:if="{{repos.length}}">
+                            <detail-card
+                                    bind:cellChange="cellChange"
+                                    dataType="book"
+                                    data="{{item}}"
+                                    wx:for="{{repos}}"
+                                    wx:key="{{index}}"
+                                    icon="/images/home/book.png"
+                                    title="{{item.name}}"
+                                    class="detail-card"
+                                    desc="{{item.description}}"
+                            />
+
+                        </block>
+                        <block wx:else>
+                            <l-status-show show type="data" ></l-status-show>
+                        </block>
+                    </scroll-view>
+                </view>
+            </l-tab-panel>
+            <l-tab-panel tab="团队" key="groups" slot="groups">
+                <view class="tab-content">
+                    <scroll-view scroll-y="true" class="tab-docs-list section-content">
+                        <block wx:if="{{groups.length}}">
+                            <detail-card
+                                    bind:cellChange="cellChange"
+                                    data-type="group"
+                                    wx:for="{{groups}}"
+                                    data="{{item}}"
+                                    wx:key="{{index}}"
+                                    icon="/images/home/group.png"
+                                    title="{{item.name}}"
+                                    class="detail-card"
+                                    desc="{{item.description}}"
+                            />
+                        </block>
+                        <block wx:else>
+                            <l-status-show show type="data" ></l-status-show>
+                        </block>
+                    </scroll-view>
+                </view>
+            </l-tab-panel>
+        </l-tabs>
+    </view>
+</view>
+
+<template is="pageState" data="{{...pageState}}" />

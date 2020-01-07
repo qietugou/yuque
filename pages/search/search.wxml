@@ -1,0 +1,32 @@
+<wxs src="../../wxs/rich.wxs" module="d" />
+<import src="/template/request/request.wxml" />
+<view class="container">
+    <l-search-bar
+            l-class="search-input"
+            placeholder="搜索"
+            shape="circle"
+            focus="{{true}}"
+            show-cancel="{{false}}"
+            bind:linchange="changeSearch"
+    >
+    </l-search-bar>
+    <view class="search-bottom  list">
+        <view class="number">
+            已找到{{number}}项
+        </view>
+        <block  wx:for="{{list}}" wx:key="{{index}}">
+
+            <view class="list-item" data-bookId="{{item._record.book_id}}" data-id="{{item._record.id}}" bindtap="changeItem">
+             <rich-text class="title" nodes="{{d.formatStr(item.title)}}"></rich-text>
+                <rich-text class="desc" nodes="{{d.formatStr(item.abstract)}}"></rich-text>
+                <view class="info">
+                    <image class="image" src="/images/home/book.png"></image>
+                    <text>{{item.group_name}}</text>
+                    <text> / </text>
+                    <text>{{item.book_name}}</text>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
+<template is="pageState" data="{{...pageState}}" />

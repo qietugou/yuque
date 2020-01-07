@@ -1,0 +1,59 @@
+<wxs src="../../wxs/date.wxs" module="d" />
+<import src="/template/request/request.wxml" />
+<view class="container">
+    <view class="user-info">
+        <image class="image" src="{{user.small_avatar_url}}"></image>
+        <text class="name">{{user.name}}</text>
+        <view class="time"><l-tag plain>最后更新 {{d.dateFormatStr(user.updated_at)}}</l-tag></view>
+    </view>
+    <view class="grid-container">
+        <l-grid rowNum="4">
+            <l-grid-item key="one" slot="one">
+                <view class="num">{{user.books_count}}</view>
+                <view class="text">知识库</view>
+            </l-grid-item>
+            <l-grid-item key="two" slot="two">
+                <view class="num">{{user.followers_count}}</view>
+                <view class="text">关注者</view>
+            </l-grid-item>
+            <l-grid-item key="three" slot="three">
+                <view class="num">{{user.following_count}}</view>
+                <view class="text">关注了</view>
+            </l-grid-item>
+            <l-grid-item key="four" slot="four">
+                <view class="num">{{user.public_books_count}}</view>
+                <view class="text">公开库</view>
+            </l-grid-item>
+        </l-grid>
+    </view>
+    <view class="list-container">
+        <l-list image="/images/other/lin-logo.png" is-link="{{false}}" title="鸣谢 Lin-UI"/>
+        <l-list image="/images/other/yuque.png" is-link="{{false}}" title="鸣谢 语雀"/>
+        <l-list bind:lintap="changeVer" image="/images/other/ver.png"  title="版本记录" />
+        <l-list bind:lintap="changeClear" image="/images/other/clear.png"  title="清除缓存" />
+        <l-list l-class="service" image="/images/other/work.png" title="24小时服务">
+            <view slot="left-section" >
+               <button class="left-section" open-type="contact"></button>
+            </view>
+        </l-list>
+        <l-list image="/images/other/switch.png" bindtap="switchUser" title="切换账户"/>
+    </view>
+</view>
+<l-dialog
+        l-class="dialog"
+        show="{{switchUser}}"
+        type="confirm"
+        locked="{{true}}"
+        title="切换用户"
+        bind:linconfirm="confirm"
+        bind:lincancel="cancel"
+>
+    <view class="confirm-form">
+        <text class="text">请从语雀后台获取 token</text>
+        <l-input l-class="token" focus="{{focus}}"
+                 bind:lininput="tokenInput"
+                 clear="{{true}}" value="{{inputValue}}"hide-label width="580" placeholder="请输入Token"  />
+    </view>
+</l-dialog>
+<template is="pageState" data="{{...pageState}}" />
+<l-message />

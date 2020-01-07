@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/find/find",
+    "pages/index/index",
+    "pages/toc/toc",
+    "pages/detail/detail",
+    "pages/group/group",
+    "pages/my/my",
+    "pages/version/version",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "切图狗",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 100
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "color": "#333333",
+    "selectedColor": "#3683d6",
+    "list": [
+      {
+        "text": "工作台",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tabbar/work.png",
+        "selectedIconPath": "images/tabbar/work@sel.png"
+      },
+      {
+        "text": "发现",
+        "pagePath": "pages/find/find",
+        "iconPath": "images/tabbar/find.png",
+        "selectedIconPath": "images/tabbar/find@sel.png"
+      },
+      {
+        "text": "我",
+        "pagePath": "pages/my/my",
+        "iconPath": "images/tabbar/my.png",
+        "selectedIconPath": "images/tabbar/my@sel.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "l-toast": "/miniprogram_npm/lin-ui/toast/index",
+    "l-button": "/miniprogram_npm/lin-ui/button/index",
+    "l-icon": "/miniprogram_npm/lin-ui/icon/index",
+    "l-tag": "/miniprogram_npm/lin-ui/tag/index",
+    "l-loadmore": "/miniprogram_npm/lin-ui/loadmore/index",
+    "l-status-show": "/miniprogram_npm/lin-ui/status-show/index"
+  }
+}

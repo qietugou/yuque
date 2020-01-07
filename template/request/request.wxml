@@ -1,0 +1,13 @@
+<template name="pageState">
+    <view class="page-state-container" wx:if="{{state}}">
+        <view class="page-state-center" wx:if="{{state == 'empty'}}">
+            <l-status-show show type="data" bind:lintap="stateReload"describe="{{stateMessage}}"  button-text="重新加载" ></l-status-show>
+        </view>
+        <view class="page-state-error page-state-center" wx:if="{{state == 'error'}}">
+            <l-status-show show type="error" bind:lintap="stateReload" describe="{{stateMessage}}" button-text="重新加载"></l-status-show>
+        </view>
+        <view class="page-state-error page-state-center" wx:if="{{state == 'network'}}">
+            <l-status-show show type="network" bind:lintap="stateReload" describe="{{stateMessage}}"  button-text="重新加载" ></l-status-show>
+        </view>
+    </view>
+</template>>

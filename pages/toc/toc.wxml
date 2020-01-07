@@ -1,0 +1,20 @@
+<import src="/template/request/request.wxml" />
+<view class="section">
+    <title class="title" title="目录" count="{{count}}"></title>
+    <view class="content">
+        <view>
+            <block wx:if="{{tocList.length}}">
+                <block  wx:for="{{tocList}}"  wx:key="{{index}}">
+                    <l-list data-bookId="{{item.book_id}}"data-id="{{item.id}}" bind:lintap="tapDetail" l-class="toc-list"
+                            l-content-class="toc-list-title" title="{{item.title}}" />
+                </block>
+            </block>
+
+            <block wx:else>
+                <l-status-show show type="data" bind:lintap="goBack" button-text="返回"></l-status-show>
+            </block>
+
+        </view>
+    </view>
+</view>
+<template is="pageState" data="{{...pageState}}" />

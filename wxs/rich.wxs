@@ -1,0 +1,9 @@
+var formatStr = function (info) {
+   info = info || ''
+   var reg = getRegExp("<em>", 'g')
+   info = info.replace(reg, "<em class='em-class'>")
+   return info
+}
+module.exports = {
+    formatStr: formatStr
+}

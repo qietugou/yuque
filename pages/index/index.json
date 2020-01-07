@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "l-search-bar": "/miniprogram_npm/lin-ui/search-bar/index",
+    "l-tabs": "/miniprogram_npm/lin-ui/tabs/index",
+    "l-tab-panel": "/miniprogram_npm/lin-ui/tabpanel/index",
+    "detail-card": "/components/detail-card/index"
+  }
+}

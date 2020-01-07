@@ -1,0 +1,30 @@
+{
+  "name": "miniprogram-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit":"lint-staged",
+    "clean":"rm -rf dist/*",
+    "lint":"eslint -c .eslintrc ./pages"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lin-ui": "^0.6.13",
+    "babel-eslint":"^8.2.1",
+    "eslint":"^3.12.1",
+    "eslint-config-prettier":"^2.9.0",
+    "eslint-plugin-import":"^2.8.0",
+    "eslint-plugin-prettier":"^2.3.1",
+    "lint-staged":"^6.0.0",
+    "prettier":"^1.8.2"
+  }
+}

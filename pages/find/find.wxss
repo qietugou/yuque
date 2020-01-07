@@ -1,0 +1,71 @@
+.section {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    border-radius: 8rpx 8rpx 0 0;
+    padding-bottom: 100rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    flex: 1;
+    margin: 30rpx 0rpx;
+}
+.card {
+    margin: 15rpx auto !important;
+}
+
+.navi-title {
+    display: flex;
+    justify-content: space-between;
+    width: 750rpx;
+    height: 100rpx;
+    align-items: center;
+    background: #f5f5f5;
+}
+
+.line {
+    width: 8rpx;
+    height: 28rpx;
+    background: #3963BC;
+    border-radius: 0px 6rpx 6rpx 0px;
+    margin-right: 22rpx;
+}
+
+.title-left {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.title-left text {
+    font-size: 28rpx;
+    color: #3683d6;
+}
+.title {
+    font-size: 30rpx;
+    font-weight: bold;
+}
+.avter-content {
+    font-size: 24rpx;
+    font-weight: 200;
+    margin: 10rpx 0rpx;
+    word-wrap: break-word;
+}
+.avter-share-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.like-container {
+    font-size: 20rpx;
+    font-weight: 100;
+}
+.like-container .name {
+    font-weight: 400;
+}
+.number {
+    font-weight: 300;
+    font-size: 22rpx;
+}
