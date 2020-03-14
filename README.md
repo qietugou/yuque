@@ -35,6 +35,9 @@
 
 Lin UI 是基于 **微信小程序原生语法** 实现的组件库。遵循简洁，易用的设计规范。
 
+```
+config.dev.js  改为 config.js
+```
 # 案例
 
 <center class="">
